@@ -1,0 +1,75 @@
+{%extends 'blog/basic.html'%}
+{% block body %}
+<header>
+    <!-- Intro settings -->
+    <!--  -->
+
+    <!-- Navbar -->
+
+    <!-- Navbar -->
+
+    <!-- Jumbotron -->
+
+    <!-- Jumbotron -->
+</header>
+<!--Main Navigation-->
+
+<!--Main layout-->
+<main class="my-5">
+    <div class="container">
+        <h4 class="mb-5"><strong>Latest posts</strong></h4>
+        {%for i in page_obj%}
+        <!--Section: Content-->
+
+        <section class="text-center">
+
+
+            <div class="row">
+
+                <!-- <div class="col-lg-4 col-md-12 mb-4"> -->
+                <div class="card">
+                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                        <img src='/media/{{i.image}}' class="img-fluid" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{i.title}}</h5>
+                        <a href="/blog/blogView/{{i.id}}" class="btn btn-primary">Read</a>
+                    </div>
+                </div>
+                <!-- </div>   -->
+
+            </div>
+            <br>
+            <br>
+            <br>
+        </section>
+        {% endfor %}
+
+    </div>
+</main>
+<section class="text-center">
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </span>
+
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+</section>
+{% endblock %}
+<!--Main layout-->
+
+<!--Footer-->

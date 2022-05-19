@@ -1,0 +1,41 @@
+{% extends 'blog/basic.html' %}
+
+{% block title %} {{product.product_name}} {%endblock%}
+{% block css %}  {%endblock%}
+{% block body %}
+<article class="blog-post">
+    <img src="/media/{{blog.image}} " height="300px" width="400px">
+    <hr>
+    <h2 class="blog-post-title mb-1">{{blog.title}}</h2>
+    <hr>
+    <p class="blog-post-meta">{{blog.timestamp}}<a href="#">Mark</a></p>
+
+    <p>{{blog.head1}}</p>
+    
+    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+    <h3>{{blog.head2}}</h3>
+    <p>{{blog.body2}}</p>
+    
+    <p>{{blod.body2}}</p>
+    <h3>{{blog.head3}}</h3>
+    <p>{{blog.body3}}</p>
+    
+    
+  </article>
+{%endblock%}
+
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+
+    {% block js %}{% endblock %}
+</body>
+</html>
