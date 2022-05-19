@@ -22,7 +22,7 @@ print("***************", BASE_DIR, "*****************")
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-32x*w*e3tky+neef3)4kt-xgy3y29fdsj-&r%qbkar=eas&jp9'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
